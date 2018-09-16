@@ -1,14 +1,35 @@
 <template>
   <div class="backstage">
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Company name</a>
-      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" @click.prevent="signout" href="#">Sign out</a>
-        </li>
-      </ul>
+    
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse  bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Back stage</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>-->
+        </ul>
+        <!--<form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>-->
+      </div>
     </nav>
+
 
     <div class="container-fluid">
       <div class="row">
@@ -32,7 +53,7 @@
           </div>
         </nav>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 pt-5">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 pt-1">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">WELCOME</h1>
           </div>
@@ -56,7 +77,9 @@ export default {
 
 <style lang="sass" scoped>
 body, html
-  background-color: #eee
+  background-color: #fff
+  nav.navbar
+    z-index: 1000
 .feather
   width: 16px
   height: 16px
@@ -68,9 +91,7 @@ body, html
   bottom: 0
   left: 0
   z-index: 100
-  /* Behind the navbar
   padding: 48px 0 0
-  /* Height of navbar
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1)
 
 .sidebar-sticky
@@ -102,11 +123,8 @@ body, html
   text-transform: uppercase
 
 .navbar-brand
-  padding-top: .75rem
-  padding-bottom: .75rem
   font-size: 1rem
-  background-color: rgba(0, 0, 0, 0.25)
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25)
+  font-weight: bold
 
 .navbar .form-control
   padding: .75rem 1rem

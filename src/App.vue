@@ -8,6 +8,10 @@
   </div>
 </template>
 
+<style>
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css";
+</style>
+
 <style lang="scss">
 #app {
   width: 100%;

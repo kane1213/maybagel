@@ -16,6 +16,15 @@ export default {
   components: {
     HelloWorld,
     SiteMenu
+  },
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: "May's Bagel",
+    // all titles will be injected into this template
+    titleTemplate: '%s | My Awesome Webapp'
+  },
+  mounted() {
+    //console.log(process.env.VUE_APP_API);
   }
 }
 </script>
@@ -42,7 +51,7 @@ html
 
 body
   height: 100%
-  background-color: #aaa !important
+  background-color: #aaa
   display: -ms-flexbox
   display: -webkit-box
   display: flex

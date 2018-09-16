@@ -54,8 +54,12 @@ export default new Router({
       component: () => import('./views/Backstage.vue'),
       children: [
         {
-          path: 'products',
+          path: '',
           name: 'products',
+        },
+        {
+          path: 'products',
+          name: 'product',
           component: () => import('./components/Products.vue')
         }
       ]
