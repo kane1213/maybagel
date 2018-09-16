@@ -1,7 +1,10 @@
 <template>
-  <div>
-    Products
-
+  <div class="row">
+    <div class="col-md-3" v-for="prod in products">
+      <div class="border rounded">
+        <h4 v-text="prod.title"></h4>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,13 +12,23 @@
 export default {
   data () {
     return {
-
+      products: []
     }
   },
   created () {
-    if (this.$store.state.siteProduct.length === 0) {
+    /*if (this.$store.state.siteProduct.length === 0) {
       this.$store.dispatch('getProducts')
-    }
+    }*/
+    //$.blockui();
+
+    alert($("#app").length);
+    const _this = this;
+    this.$http.get("http://kane1213.synology.me/maysbagel/api/index.php").then(function(_resp) {
+      if(_resp.data.State) {
+        _this.products = _resp.data.Data;
+      }
+    });
+
   },
   computed: {
 

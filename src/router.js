@@ -55,11 +55,11 @@ export default new Router({
       children: [
         {
           path: '',
-          name: 'products',
+          name: 'init',
         },
         {
           path: 'products',
-          name: 'product',
+          name: 'products',
           component: () => import('./components/Products.vue')
         }
       ]

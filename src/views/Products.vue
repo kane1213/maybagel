@@ -1,7 +1,6 @@
 <template>
   <div class="product">
-    <SiteMenu></SiteMenu>
-    <router-view></router-view>
+    21132323232324423
   </div>
 </template>
 
